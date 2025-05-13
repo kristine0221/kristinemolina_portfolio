@@ -4,198 +4,203 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kristine Molina - IT Systems Analyst & Web Developer</title>
+  <title>Kristine Molina — IT Systems Analyst & Web Developer</title>
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
     rel="stylesheet" />
+
+  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Custom Styles -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 
-<body class="container py-4">
-  <!-- 6. navbar with id -->
-   <nav id="navbar" class="navbar navbar-expand-md">
-    <ul class="navbar-nav mb-2 mb-md-0 d-flex flex-row">
-      <li class="nav-item"><a class="nav-link" href="#welcome-section">Home</a></li>
-      <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-      <li class="nav-item"><a class="nav-link" href="#technologies">Technologies</a></li>
-      <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-      <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
-      <li class="nav-item"><a class="nav-link" href="#contact-section">Contact</a></li>
-    </ul>
+<body>
+  <!-- Navbar -->
+  <nav id="navbar" class="navbar navbar-expand-md fixed-top bg-light shadow-sm">
+    <div class="container">
+      <ul class="navbar-nav d-flex flex-row gap-3">
+        <li class="nav-item"><a class="nav-link" href="#welcome-section">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#technologies">Technologies</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact-section">Contact</a></li>
+      </ul>
+    </div>
   </nav>
 
-  <!-- 1. welcome-section with id -->
-  <header id="welcome-section" class="text-center mb-5">
-    <div class="mb-4">
-      <img src="images/kristinemolina.jpg" alt="Kristine Molina" class="rounded-circle img-fluid"
-        style="width: 200px; height: 200px; object-fit: cover;" />
-    </div>
-
-    <!-- 2. h1 with text -->
-    <h1 class="display-4 fw-bold mb-3">Kristine B. Molina</h1>
-    <p class="lead mb-2">IT Systems Analyst & Web Developer</p>
-    <p class="text-muted">
-      <span class="me-3">📧 kristine_molina@ymail.com</span>
-      <span>📱 +63 966-943-7085</span>
-      <span>🌐  <a id="profile-link" target="_blank" href="https://kristine0221.github.io/kristinemolina_portfolio/">Visit My Website</a></span>
-    </p>
-  </header>
-
-  <div class="row g-4">
-    <section class="col-12 mb-4">
-      <h2 class="border-bottom pb-2 mb-4">Professional Summary</h2>
-      <p>I am a results-driven IT professional with over 8 years of experience in systems analysis, web
-        development,
-        and process improvement. I specialize in streamlining business operations, creating user-focused
-        solutions,
-        and delivering quality results through strong technical and analytical skills. My expertise spans
-        business
-        process design, manual testing, data analysis, and front-end development.</p>
-    </section>
-
-    <section id="skills" class="col-12 mb-4">
-      <h2 class="border-bottom pb-2 mb-4">Key Skills and Expertise</h2>
-      <div class="row g-4">
-        <!-- ... your skill blocks ... -->
-        <div class="col-md-4 mb-3">
-            <h3 class="h5 fw-bold mb-3">Systems Analysis</h3>
-            <ul>
-                <li>Process design and improvement for CRM and business systems</li>
-                <li>Stakeholder collaboration to align IT solutions with business goals</li>
-                <li>Coordinating cross-functional teams for system integration</li>
-            </ul>
-        </div>
-
-        <div class="col-md-4 mb-3">
-            <h3 class="h5 fw-bold mb-3">Web Development</h3>
-            <ul>
-                <li>Front-end development using HTML, CSS, JavaScript, and React.js.</li>
-                <li>Content management with Sitecore CMS. </li>
-                <li>Custom workflow automation using APIs (e.g., JIRA REST API). </li>
-            </ul>
-        </div>
-
-        <div class="col-md-4 mb-3">
-            <h3 class="h5 fw-bold mb-3">Testing</h3>
-            <ul>
-                <li>Manual testing for system reliability. </li>
-                <li>Test case creation and execution. </li>
-                <li>Leading user acceptance testing (UAT). </li>
-            </ul>
-        </div>
+  <div class="container">
+    <!-- Welcome Section -->
+    <header id="welcome-section" class="text-center mb-5">
+      <div class="mb-4">
+        <img src="images/kristinemolina.jpg"
+             alt="Kristine Molina"
+             class="rounded-circle img-fluid profile-pic" />
       </div>
-    </section>
+      <h1 class="display-4 fw-bold mb-2">Kristine B. Molina</h1>
+      <p class="lead mb-3">IT Systems Analyst & Web Developer</p>
+      <p class="text-muted">
+        <span class="me-3">📧 kristine_molina@ymail.com</span>
+        <span class="me-3">📱 +63 966-943-7085</span>
+        <span>🌐
+          <a id="profile-link"
+             class="text-reset"
+             href="https://kristine0221.github.io/kristinemolina_portfolio/"
+             target="_blank">
+            Visit My Website
+          </a>
+        </span>
+      </p>
+    </header>
 
-    <section id="technologies" class="col-12 mb-4">
-      <h2 class="border-bottom pb-2 mb-4">Tools and Technologies</h2>
-      <div class="mb-3">
-        <ul>
+    <div class="row g-4">
+      <!-- Professional Summary -->
+      <section class="col-12">
+        <h2 class="border-bottom pb-2 mb-3">Professional Summary</h2>
+        <p>
+          Results-driven IT professional with over 8 years’ experience in systems analysis,
+          web development, and process improvement. Skilled in streamlining business operations,
+          creating user-focused solutions, and delivering quality results through strong
+          technical and analytical abilities.
+        </p>
+      </section>
+
+      <!-- Key Skills & Expertise -->
+      <section id="skills" class="col-12">
+        <h2 class="border-bottom pb-2 mb-3">Key Skills & Expertise</h2>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <h3 class="h5 fw-bold">Systems Analysis</h3>
+            <ul>
+              <li>Process design & improvement for CRM and business systems</li>
+              <li>Stakeholder collaboration to align IT solutions with business goals</li>
+              <li>Coordinating cross-functional teams for system integration</li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h3 class="h5 fw-bold">Web Development</h3>
+            <ul>
+              <li>Front-end development with HTML, CSS, JavaScript & React.js</li>
+              <li>Content management using Sitecore CMS</li>
+              <li>Workflow automation via APIs (e.g., JIRA REST API)</li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h3 class="h5 fw-bold">Testing</h3>
+            <ul>
+              <li>Manual testing for system reliability</li>
+              <li>Test case creation & execution</li>
+              <li>Leading user acceptance testing (UAT)</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tools & Technologies -->
+      <section id="technologies" class="col-12">
+        <h2 class="border-bottom pb-2 mb-3">Tools & Technologies</h2>
+        <ul class="list-unstyled mb-0">
           <li>Microsoft Office Suite</li>
           <li>JIRA</li>
           <li>Sitecore CMS</li>
           <li>Power BI</li>
           <li>React.js</li>
         </ul>
-      </div>
-    </section>
+      </section>
 
-    <!-- 3. projects section with id -->
-    <section id="projects" class="col-12 mb-4">
-      <h2 class="border-bottom pb-2 mb-4">Project Highlights</h2>
-      <div class="row g-4">
-        <!-- 4. project-tile class; 5. at least one link -->
-        <div class="col-md-6 mb-3">
-          <a href="https://github.com/yourusername/nimble-crm-process" target="_blank" class="project-tile text-decoration-none">
-            <div class="project-card">
-              <h3 class="h5 fw-bold mb-3">CRM Platform Process Design</h3>
+      <!-- Project Highlights -->
+      <section id="projects" class="col-12">
+        <h2 class="border-bottom pb-2 mb-3">Project Highlights</h2>
+        <div class="row g-4">
+          <div class="col-md-6">
+            <a href="https://github.com/yourusername/nimble-crm-process"
+               target="_blank"
+               class="text-decoration-none">
+              <div class="project-card p-4 h-100">
+                <h3 class="h5 fw-bold">CRM Platform Process Design</h3>
+                <ul>
+                  <li>Optimized Nimble CRM business processes at Taft Properties</li>
+                  <li>Streamlined customer relationship management & improved efficiency</li>
+                </ul>
+                <p class="mt-2"><small>View on GitHub →</small></p>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6">
+            <div class="project-card p-4 h-100">
+              <h3 class="h5 fw-bold">Custom Workflow Automation</h3>
               <ul>
-                <li>Refined and optimized the business processes for the Nimble CRM platform at Taft
-                  Properties</li>
-                <li>Result: Streamlined customer relationship management and improved team efficiency</li>
+                <li>Built React tool leveraging JIRA REST API for task-tracking</li>
+                <li>Reduced manual workload & improved visibility at Entain Manila</li>
               </ul>
-              <p class="mt-2"><small>View on GitHub →</small></p>
             </div>
-          </a>
-        </div>
-
-        <!-- repeat for other projects... -->
-        <div class="col-md-6 mb-3">
-            <div class="project-card">
-                <h3 class="h5 fw-bold mb-3">Custom Workflow Automation</h3>
-                <ul>
-                    <li>Developed a tool using React.js and JIRA REST API to automate task tracking workflows.
-                    </li>
-                    <li>Result: Reduced manual workload and improved task visibility for teams at Entain Manila.
-                    </li>
-                </ul>
+          </div>
+          <div class="col-md-6">
+            <div class="project-card p-4 h-100">
+              <h3 class="h5 fw-bold">System Implementation Coordination</h3>
+              <ul>
+                <li>Coordinated Medsys Hospital System deployment at World Citi Medical Center</li>
+                <li>Enhanced operational efficiency for hospital staff</li>
+              </ul>
             </div>
-        </div>
-
-        <div class="col-md-6 mb-3">
-            <div class="project-card">
-                <h3 class="h5 fw-bold mb-3">System Implementation Coordination</h3>
-                <ul>
-                    <li>Played a critical role in implementing the Medsys Hospital System at World Citi Medical
-                        Center, from
-                        initial analysis to deployment. </li>
-                    <li>Result: Successful integration of the system, enhancing operational efficiency for
-                        hospital staff.
-                    </li>
-                </ul>
+          </div>
+          <div class="col-md-6">
+            <div class="project-card p-4 h-100">
+              <h3 class="h5 fw-bold">UAT Leadership</h3>
+              <ul>
+                <li>Led UAT process for multiple system integrations at Taft Properties</li>
+                <li>Delivered error-free systems aligned with user requirements</li>
+              </ul>
             </div>
+          </div>
         </div>
+      </section>
 
-        <div class="col-md-6 mb-3">
-            <div class="project-card">
-                <h3 class="h5 fw-bold mb-3">UAT Leadership</h3>
-                <ul>
-                    <li>Led the user acceptance testing (UAT) process for multiple system integrations at Taft
-                        Properties.
-                    </li>
-                    <li>Result: Delivered error-free systems aligned with user requirements. </li>
-                </ul>
-            </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ... rest of your sections ... -->
-    <section class="col-12 mb-4">
-        <h2 class="border-bottom pb-2 mb-4">How I Approach Projects</h2>
+      <!-- Approach -->
+      <section class="col-12">
+        <h2 class="border-bottom pb-2 mb-3">How I Approach Projects</h2>
         <ol>
-            <li><strong>Understand Requirements</strong>: Collaborate with stakeholders to gather and analyze
-                business
-                needs.</li>
-            <li><strong>Develop Solutions</strong>: Design and implement processes or systems to address
-                requirements.
-            </li>
-            <li><strong>Test and Validate</strong>: Conduct thorough testing (including UAT) to ensure reliability.
-            </li>
-            <li><strong>Deliver and Support</strong>: Seamlessly integrate solutions and provide ongoing support.
-            </li>
+          <li><strong>Understand Requirements</strong>: Collaborate with stakeholders to gather business needs.</li>
+          <li><strong>Develop Solutions</strong>: Design & implement systems to meet requirements.</li>
+          <li><strong>Test & Validate</strong>: Conduct thorough testing (including UAT).</li>
+          <li><strong>Deliver & Support</strong>: Integrate solutions and provide ongoing support.</li>
         </ol>
-    </section>
+      </section>
 
-    <section id="certifications" class="col-12 mb-4">
-        <h2 class="border-bottom pb-2 mb-4">Certifications and Training</h2>
+      <!-- Certifications -->
+      <section id="certifications" class="col-12">
+        <h2 class="border-bottom pb-2 mb-3">Certifications & Training</h2>
         <ul>
-            <li><strong>Complete Guide to Power BI for Data Analysts</strong> – LinkedIn Learning (2024)</li>
-            <li><strong>Project Management Foundations</strong> – LinkedIn Learning (2024)</li>
-            <li><strong>Agile Product Owner Role: Foundations</strong> – LinkedIn Learning (2023)</li>
-            <li><strong>Introduction to React.js</strong> – LinkedIn Learning (2019)</li>
+          <li><strong>Complete Guide to Power BI for Data Analysts</strong> – LinkedIn Learning (2024)</li>
+          <li><strong>Project Management Foundations</strong> – LinkedIn Learning (2024)</li>
+          <li><strong>Agile Product Owner Role: Foundations</strong> – LinkedIn Learning (2023)</li>
+          <li><strong>Introduction to React.js</strong> – LinkedIn Learning (2019)</li>
+          <li>
+            <strong><a href="https://www.freecodecamp.org/certification/kristine_molina/responsive-web-design"
+                       target="_blank"
+                       class="text-reset">Responsive Web Design</a></strong>
+            – FreeCodeCamp.org
+          </li>
         </ul>
-    </section>
-  </div>
+      </section>
+    </div>
 
-  <footer id="contact-section" class="text-center mt-5 pt-4 border-top">
-    <h2 class="h4 mb-3">Let's Work Together</h2>
-    <p>I am passionate about helping businesses achieve efficiency and success through effective IT
-      solutions. If you’re looking for a reliable professional who delivers results, feel free to reach out!</p>
-    <p class="text-muted">📧 kristine_molina@ymail.com | 📱 +63 966-943-7085</p>
-  </footer>
+    <!-- Contact Footer -->
+    <footer id="contact-section" class="text-center mt-5 pt-4 bg-gradient text-white">
+      <h2 class="h4 mb-3">Let’s Work Together</h2>
+      <p>
+        Passionate about helping businesses achieve efficiency and success through
+        effective IT solutions. Feel free to reach out!
+      </p>
+      <p>📧 kristine_molina@ymail.com | 📱 +63 966-943-7085</p>
+    </footer>
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
