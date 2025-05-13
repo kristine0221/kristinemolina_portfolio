@@ -11,8 +11,43 @@
     background-color: var(--background-color);
     color: var(--text-color);
     transition: all 0.3s ease;
+    /* offset for fixed navbar */
+    /* padding-top: 60px; */
+    padding: 60px 5rem;
   }
   
+  /* 11. navbar always at top */
+  #navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--background-color);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+     padding: 0 5rem;
+  }
+  #navbar .nav-link {
+    color: var(--text-color);
+  }
+  #navbar .nav-link:hover {
+    color: var(--primary-color);
+  }
+  
+  /* 10. welcome section full viewport */
+  #welcome-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 0; /* we offset padding-top already */
+  }
+  
+  #profile-link{
+    text-decoration: none;
+    color: var(--bs-secondary-color) !important;
+  }
+
   /* Header Styles */
   header {
     animation: fadeIn 1s ease-in;
@@ -70,7 +105,8 @@
   }
   
   /* List Styles */
-  ul li, ol li {
+  ul li,
+  ol li {
     margin-bottom: 8px;
     position: relative;
     padding-left: 20px;
@@ -95,7 +131,24 @@
   footer p {
     color: rgba(255, 255, 255, 0.9);
   }
+
+  /* to remove bullets in main menu */
+  #navbar .navbar-nav li::before {
+  content: none;
+}
+#navbar .navbar-nav li {
+  list-style: none; /* hides any default bullets, too */
+}
+
+#navbar .navbar-nav {
+  justify-content: flex-start;
+}
+
+#navbar .navbar-nav.ms-auto {
+  margin-left: 0 !important;
+}
   
+
   /* Animations */
   @keyframes fadeIn {
     from {
@@ -108,14 +161,24 @@
     }
   }
   
-  /* Responsive Adjustments */
+  /* 9. additional media query */
   @media (max-width: 768px) {
     section {
       padding: 15px;
     }
-    
+  
     .rounded-circle {
       width: 150px !important;
       height: 150px !important;
     }
+  
+    /* mobile nav stack */
+    #navbar .navbar-nav {
+      flex-direction: column !important;
+      justify-content: flex-end;
+    }
+    #navbar .nav-link {
+      padding: 0.5rem 1rem;
+    }
   }
+  
