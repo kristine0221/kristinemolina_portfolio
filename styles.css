@@ -1,184 +1,137 @@
 :root {
-    --primary-color: #2d5a87;
-    --secondary-color: #64b6ac;
-    --accent-color: #c0fdfb;
-    --text-color: #2d3436;
-    --background-color: #f8f9fa;
-    --hover-color: #1e3d5c;
-  }
-  
+  --primary-color: #2d5a87;
+  --secondary-color: #64b6ac;
+  --accent-color: #c0fdfb;
+  --text-color: #2d3436;
+  --bg-color: #f8f9fa;
+}
+
+/* Base & Reset */
+body {
+  margin: 0;
+  padding: 80px 2rem 2rem; /* space for fixed navbar */
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Inter', sans-serif;
+  transition: background 0.3s, color 0.3s;
+}
+
+.text-reset {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+/* Navbar */
+#navbar {
+  padding: 0.5rem 0;
+}
+#navbar .nav-link {
+  color: var(--text-color);
+  transition: color 0.2s;
+}
+#navbar .nav-link:hover {
+  color: var(--primary-color);
+}
+
+/* Profile Image */
+.profile-pic {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border: 4px solid var(--primary-color);
+  transition: transform 0.3s;
+}
+.profile-pic:hover {
+  transform: scale(1.05);
+}
+
+/* Headings */
+h1, h2, h3 {
+  color: var(--primary-color);
+}
+h2 {
+  border-bottom: 2px solid var(--secondary-color);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+h3.h5 {
+  color: var(--secondary-color);
+  margin-bottom: 0.5rem;
+}
+
+/* —— Make welcome-section fill the rest of the viewport —— */
+#welcome-section {
+  /* full viewport minus nav height */
+  min-height: calc(100vh - 80px);
+  /* center everything vertically & horizontally */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* if you had any extra margins/paddings, you can adjust them here */
+  margin: 0;
+  padding: 0;
+}
+
+/* Sections */
+section {
+  background: #fff;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
+}
+section:hover {
+  transform: translateY(-5px);
+}
+
+/* Lists */
+ul, ol {
+  margin-bottom: 0;
+  padding-left: 1.25rem;
+}
+ul li::marker {
+  color: var(--secondary-color);
+}
+
+/* Project Cards */
+.project-card {
+  background: #fff;
+  border-radius: 0.5rem;
+  transition: background 0.3s, transform 0.3s;
+}
+.project-card:hover {
+  background: var(--accent-color);
+  transform: translateX(5px);
+  border-left: 4px solid var(--secondary-color);
+}
+
+/* Footer */
+.bg-gradient {
+  background: linear-gradient(
+    to right,
+    var(--primary-color),
+    var(--secondary-color)
+  ) !important;
+}
+footer#contact-section {
+  color: #fff;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  margin-top: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
   body {
-    background-color: var(--background-color);
-    color: var(--text-color);
-    transition: all 0.3s ease;
-    /* offset for fixed navbar */
-    /* padding-top: 60px; */
-    padding: 60px 5rem;
+    padding: 100px 1rem 1rem;
   }
-  
-  /* 11. navbar always at top */
-  #navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: var(--background-color);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-     padding: 0 5rem;
+  .profile-pic {
+    width: 150px;
+    height: 150px;
   }
-  #navbar .nav-link {
-    color: var(--text-color);
-  }
-  #navbar .nav-link:hover {
-    color: var(--primary-color);
-  }
-  
-  /* 10. welcome section full viewport */
-  #welcome-section {
-    height: 100vh;
-    display: flex;
+  #navbar .navbar-nav {
     flex-direction: column;
-    justify-content: center;
-    margin-bottom: 0; /* we offset padding-top already */
+    gap: 0.5rem;
   }
-  
-  #profile-link{
-    text-decoration: none;
-    color: var(--bs-secondary-color) !important;
-  }
-
-  /* Header Styles */
-  header {
-    animation: fadeIn 1s ease-in;
-  }
-  
-  .rounded-circle {
-    border: 4px solid var(--primary-color);
-    transition: transform 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  }
-  
-  .rounded-circle:hover {
-    transform: scale(1.05);
-  }
-  
-  h1 {
-    color: var(--primary-color);
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Section Styles */
-  section {
-    background: white;
-    border-radius: 10px;
-    padding: 25px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease;
-  }
-  
-  section:hover {
-    transform: translateY(-5px);
-  }
-  
-  h2 {
-    color: var(--primary-color);
-    border-bottom-color: var(--secondary-color) !important;
-  }
-  
-  .h5 {
-    color: var(--secondary-color);
-  }
-  
-  /* Project Cards */
-  .project-card {
-    height: 100%;
-    padding: 20px;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-  }
-  
-  .project-card:hover {
-    background-color: var(--accent-color);
-    transform: translateX(5px);
-    border-left: 4px solid var(--secondary-color);
-  }
-  
-  /* List Styles */
-  ul li,
-  ol li {
-    margin-bottom: 8px;
-    position: relative;
-    padding-left: 20px;
-  }
-  
-  ul li::before {
-    content: "•";
-    color: var(--secondary-color);
-    position: absolute;
-    left: 0;
-  }
-  
-  /* Footer Styles */
-  footer {
-    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
-    color: white;
-    margin-top: 40px;
-    padding: 30px;
-    border-radius: 10px;
-  }
-  
-  footer p {
-    color: rgba(255, 255, 255, 0.9);
-  }
-
-  /* to remove bullets in main menu */
-  #navbar .navbar-nav li::before {
-  content: none;
 }
-#navbar .navbar-nav li {
-  list-style: none; /* hides any default bullets, too */
-}
-
-#navbar .navbar-nav {
-  justify-content: flex-start;
-}
-
-#navbar .navbar-nav.ms-auto {
-  margin-left: 0 !important;
-}
-  
-
-  /* Animations */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  /* 9. additional media query */
-  @media (max-width: 768px) {
-    section {
-      padding: 15px;
-    }
-  
-    .rounded-circle {
-      width: 150px !important;
-      height: 150px !important;
-    }
-  
-    /* mobile nav stack */
-    #navbar .navbar-nav {
-      flex-direction: column !important;
-      justify-content: flex-end;
-    }
-    #navbar .nav-link {
-      padding: 0.5rem 1rem;
-    }
-  }
-  
